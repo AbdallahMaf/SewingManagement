@@ -47,17 +47,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbClientNom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbClientTel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbClientCNI = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbClientPrenom = new System.Windows.Forms.TextBox();
+            this.tbClientAdress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -66,8 +65,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListClient = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
+            this.cbxClientSexe = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -78,7 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListClient)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -293,14 +293,14 @@
             this.label2.Text = "Gestion Clients";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // tbClientNom
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(211, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbClientNom.BackColor = System.Drawing.SystemColors.Window;
+            this.tbClientNom.Location = new System.Drawing.Point(211, 68);
+            this.tbClientNom.Name = "tbClientNom";
+            this.tbClientNom.Size = new System.Drawing.Size(215, 26);
+            this.tbClientNom.TabIndex = 4;
+            this.tbClientNom.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -326,12 +326,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "CNI";
             // 
-            // textBox2
+            // tbClientTel
             // 
-            this.textBox2.Location = new System.Drawing.Point(696, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 26);
-            this.textBox2.TabIndex = 6;
+            this.tbClientTel.Location = new System.Drawing.Point(696, 123);
+            this.tbClientTel.Name = "tbClientTel";
+            this.tbClientTel.Size = new System.Drawing.Size(215, 26);
+            this.tbClientTel.TabIndex = 6;
             // 
             // label5
             // 
@@ -345,12 +345,12 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Telephone";
             // 
-            // textBox3
+            // tbClientCNI
             // 
-            this.textBox3.Location = new System.Drawing.Point(453, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 26);
-            this.textBox3.TabIndex = 8;
+            this.tbClientCNI.Location = new System.Drawing.Point(453, 123);
+            this.tbClientCNI.Name = "tbClientCNI";
+            this.tbClientCNI.Size = new System.Drawing.Size(215, 26);
+            this.tbClientCNI.TabIndex = 8;
             // 
             // label6
             // 
@@ -364,13 +364,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Prenom";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(453, 68);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 26);
-            this.textBox4.TabIndex = 10;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -383,19 +376,19 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Sexe";
             // 
-            // textBox5
+            // tbClientPrenom
             // 
-            this.textBox5.Location = new System.Drawing.Point(696, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(215, 26);
-            this.textBox5.TabIndex = 12;
+            this.tbClientPrenom.Location = new System.Drawing.Point(453, 68);
+            this.tbClientPrenom.Name = "tbClientPrenom";
+            this.tbClientPrenom.Size = new System.Drawing.Size(215, 26);
+            this.tbClientPrenom.TabIndex = 12;
             // 
-            // textBox6
+            // tbClientAdress
             // 
-            this.textBox6.Location = new System.Drawing.Point(211, 123);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(215, 26);
-            this.textBox6.TabIndex = 15;
+            this.tbClientAdress.Location = new System.Drawing.Point(211, 123);
+            this.tbClientAdress.Name = "tbClientAdress";
+            this.tbClientAdress.Size = new System.Drawing.Size(215, 26);
+            this.tbClientAdress.TabIndex = 15;
             // 
             // label8
             // 
@@ -555,19 +548,19 @@
             this.panel3.Size = new System.Drawing.Size(1131, 5);
             this.panel3.TabIndex = 28;
             // 
-            // dataGridView1
+            // dgvListClient
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvListClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView1.Location = new System.Drawing.Point(194, 200);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1092, 417);
-            this.dataGridView1.TabIndex = 29;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvListClient.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvListClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListClient.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dgvListClient.Location = new System.Drawing.Point(194, 200);
+            this.dgvListClient.Name = "dgvListClient";
+            this.dgvListClient.Size = new System.Drawing.Size(1092, 417);
+            this.dgvListClient.TabIndex = 29;
+            this.dgvListClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label9
             // 
@@ -581,6 +574,17 @@
             this.label9.Text = "Listes des Clients";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // cbxClientSexe
+            // 
+            this.cbxClientSexe.FormattingEnabled = true;
+            this.cbxClientSexe.Items.AddRange(new object[] {
+            "Feminin",
+            "Masculin"});
+            this.cbxClientSexe.Location = new System.Drawing.Point(696, 68);
+            this.cbxClientSexe.Name = "cbxClientSexe";
+            this.cbxClientSexe.Size = new System.Drawing.Size(215, 26);
+            this.cbxClientSexe.TabIndex = 31;
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -589,8 +593,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1298, 629);
+            this.Controls.Add(this.cbxClientSexe);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListClient);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -598,18 +603,17 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbClientAdress);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbClientPrenom);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbClientCNI);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbClientTel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbClientNom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -631,7 +635,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListClient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -644,17 +648,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbClientNom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbClientTel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbClientCNI;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbClientPrenom;
+        private System.Windows.Forms.TextBox tbClientAdress;
         private System.Windows.Forms.Label label8;
         internal System.Windows.Forms.Button button7;
         internal System.Windows.Forms.Button button1;
@@ -664,7 +667,7 @@
         internal System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListClient;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -678,5 +681,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.ComboBox cbxClientSexe;
     }
 }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace AtelierCoutureGEST
 {
-    public partial class SuiviCommande : Form
+    public partial class Modeles : Form
     {
-        public SuiviCommande()
+        public Modeles()
         {
             InitializeComponent();
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

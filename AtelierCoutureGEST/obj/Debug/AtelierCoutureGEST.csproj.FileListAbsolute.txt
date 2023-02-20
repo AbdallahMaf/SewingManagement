@@ -12,3 +12,4 @@ C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\Atel
 C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.clients.resources
 C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.Acceuil.resources
 C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.Mesures.resources
+C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.SuiviCommande.resources

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace AtelierCoutureGEST
 {
-    public partial class Modele : Form
+    public partial class Modeles : Form
     {
-        public Modele()
+        public Modeles()
         {
             InitializeComponent();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

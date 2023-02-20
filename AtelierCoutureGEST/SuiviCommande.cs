@@ -16,5 +16,10 @@ namespace AtelierCoutureGEST
         {
             InitializeComponent();
         }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

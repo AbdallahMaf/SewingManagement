@@ -17,9 +17,9 @@ namespace AtelierCoutureGEST
             InitializeComponent();
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        private void imgClose_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

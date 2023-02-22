@@ -106,6 +106,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 699);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label15
             // 
@@ -118,6 +119,7 @@
             this.label15.Size = new System.Drawing.Size(68, 18);
             this.label15.TabIndex = 40;
             this.label15.Text = "Accueil";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // pictureBox8
             // 
@@ -128,6 +130,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 39;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label14
             // 
@@ -151,6 +154,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 37;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // label13
             // 
@@ -163,6 +167,7 @@
             this.label13.Size = new System.Drawing.Size(112, 18);
             this.label13.TabIndex = 36;
             this.label13.Text = "Deconnexion";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox6
             // 
@@ -173,6 +178,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 35;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label12
             // 
@@ -185,6 +191,7 @@
             this.label12.Size = new System.Drawing.Size(64, 18);
             this.label12.TabIndex = 34;
             this.label12.Text = "Models";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // pictureBox5
             // 
@@ -195,6 +202,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 33;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label11
             // 
@@ -218,6 +226,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 31;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label10
             // 
@@ -230,6 +239,7 @@
             this.label10.Size = new System.Drawing.Size(63, 18);
             this.label10.TabIndex = 30;
             this.label10.Text = "Clients";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox3
             // 
@@ -240,6 +250,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 29;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -250,6 +261,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel2
             // 
@@ -263,6 +275,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1009, 21);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox12
             // 
@@ -274,6 +287,7 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 40;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox11
             // 
@@ -285,6 +299,7 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 39;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // pictureBox9
             // 
@@ -342,6 +357,7 @@
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Nom";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -354,6 +370,7 @@
             this.label4.Size = new System.Drawing.Size(31, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "CNI";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbClientTel
             // 
@@ -361,6 +378,7 @@
             this.tbClientTel.Name = "tbClientTel";
             this.tbClientTel.Size = new System.Drawing.Size(194, 28);
             this.tbClientTel.TabIndex = 6;
+            this.tbClientTel.TextChanged += new System.EventHandler(this.tbClientTel_TextChanged);
             // 
             // label5
             // 
@@ -373,6 +391,7 @@
             this.label5.Size = new System.Drawing.Size(75, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "Telephone";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // tbClientCNI
             // 
@@ -380,6 +399,7 @@
             this.tbClientCNI.Name = "tbClientCNI";
             this.tbClientCNI.Size = new System.Drawing.Size(194, 28);
             this.tbClientCNI.TabIndex = 8;
+            this.tbClientCNI.TextChanged += new System.EventHandler(this.tbClientCNI_TextChanged);
             // 
             // label6
             // 
@@ -392,6 +412,7 @@
             this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 11;
             this.label6.Text = "Prenom";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -404,6 +425,7 @@
             this.label7.Size = new System.Drawing.Size(39, 15);
             this.label7.TabIndex = 13;
             this.label7.Text = "Sexe";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // tbClientPrenom
             // 
@@ -411,6 +433,7 @@
             this.tbClientPrenom.Name = "tbClientPrenom";
             this.tbClientPrenom.Size = new System.Drawing.Size(194, 28);
             this.tbClientPrenom.TabIndex = 12;
+            this.tbClientPrenom.TextChanged += new System.EventHandler(this.tbClientPrenom_TextChanged);
             // 
             // tbClientAdress
             // 
@@ -418,6 +441,7 @@
             this.tbClientAdress.Name = "tbClientAdress";
             this.tbClientAdress.Size = new System.Drawing.Size(194, 28);
             this.tbClientAdress.TabIndex = 15;
+            this.tbClientAdress.TextChanged += new System.EventHandler(this.tbClientAdress_TextChanged);
             // 
             // label8
             // 
@@ -430,6 +454,7 @@
             this.label8.Size = new System.Drawing.Size(60, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "Adresse";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // button7
             // 
@@ -453,6 +478,7 @@
             this.button7.TabStop = false;
             this.button7.Text = "Enregistrer";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button1
             // 
@@ -476,6 +502,7 @@
             this.button1.TabStop = false;
             this.button1.Text = "Supprimer";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -499,6 +526,7 @@
             this.button2.TabStop = false;
             this.button2.Text = "Modifier";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -522,6 +550,7 @@
             this.button3.TabStop = false;
             this.button3.Text = "Mesure";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -545,6 +574,7 @@
             this.button4.TabStop = false;
             this.button4.Text = "Recherche";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -568,6 +598,7 @@
             this.button5.TabStop = false;
             this.button5.Text = "Modele";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel3
             // 
@@ -576,6 +607,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1018, 6);
             this.panel3.TabIndex = 28;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dgvListClient
             // 
@@ -613,6 +645,7 @@
             this.cbxClientSexe.Name = "cbxClientSexe";
             this.cbxClientSexe.Size = new System.Drawing.Size(194, 28);
             this.cbxClientSexe.TabIndex = 31;
+            this.cbxClientSexe.SelectedIndexChanged += new System.EventHandler(this.cbxClientSexe_SelectedIndexChanged);
             // 
             // Clients
             // 

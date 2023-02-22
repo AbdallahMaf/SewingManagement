@@ -17,22 +17,7 @@ namespace AtelierCoutureGEST
             InitializeComponent();
         }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pbClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

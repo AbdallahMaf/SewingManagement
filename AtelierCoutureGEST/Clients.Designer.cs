@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clients));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbHome = new System.Windows.Forms.Label();
+            this.pbHome = new System.Windows.Forms.PictureBox();
+            this.lbSuivie = new System.Windows.Forms.Label();
+            this.pbSuivie = new System.Windows.Forms.PictureBox();
+            this.lbDeconnection = new System.Windows.Forms.Label();
+            this.pbDeconnection = new System.Windows.Forms.PictureBox();
+            this.lbModels = new System.Windows.Forms.Label();
+            this.pbModels = new System.Windows.Forms.PictureBox();
+            this.lbMesure = new System.Windows.Forms.Label();
+            this.pbMesure = new System.Windows.Forms.PictureBox();
+            this.lbClients = new System.Windows.Forms.Label();
+            this.pbClients = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -60,24 +60,24 @@
             this.tbClientPrenom = new System.Windows.Forms.TextBox();
             this.tbClientAdress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnEnregistrerClient = new System.Windows.Forms.Button();
+            this.btnDeleteClient = new System.Windows.Forms.Button();
+            this.btnUpdateClient = new System.Windows.Forms.Button();
+            this.btnMesureClient = new System.Windows.Forms.Button();
+            this.btnSearchClient = new System.Windows.Forms.Button();
+            this.btnModeleClient = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvListClient = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbListClients = new System.Windows.Forms.Label();
             this.cbxClientSexe = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuivie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeconnection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbModels)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMesure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -88,168 +88,166 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lbHome);
+            this.panel1.Controls.Add(this.pbHome);
+            this.panel1.Controls.Add(this.lbSuivie);
+            this.panel1.Controls.Add(this.pbSuivie);
+            this.panel1.Controls.Add(this.lbDeconnection);
+            this.panel1.Controls.Add(this.pbDeconnection);
+            this.panel1.Controls.Add(this.lbModels);
+            this.panel1.Controls.Add(this.pbModels);
+            this.panel1.Controls.Add(this.lbMesure);
+            this.panel1.Controls.Add(this.pbMesure);
+            this.panel1.Controls.Add(this.lbClients);
+            this.panel1.Controls.Add(this.pbClients);
+            this.panel1.Controls.Add(this.pbLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 699);
             this.panel1.TabIndex = 0;
             // 
-            // label15
+            // lbHome
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(64, 222);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 18);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Accueil";
+            this.lbHome.AutoSize = true;
+            this.lbHome.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.lbHome.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHome.ForeColor = System.Drawing.Color.White;
+            this.lbHome.Location = new System.Drawing.Point(64, 222);
+            this.lbHome.Name = "lbHome";
+            this.lbHome.Size = new System.Drawing.Size(68, 18);
+            this.lbHome.TabIndex = 40;
+            this.lbHome.Text = "Accueil";
             // 
-            // pictureBox8
+            // pbHome
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(11, 197);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(48, 57);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 39;
-            this.pictureBox8.TabStop = false;
+            this.pbHome.Image = ((System.Drawing.Image)(resources.GetObject("pbHome.Image")));
+            this.pbHome.Location = new System.Drawing.Point(11, 197);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(48, 57);
+            this.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHome.TabIndex = 39;
+            this.pbHome.TabStop = false;
             // 
-            // label14
+            // lbSuivie
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(64, 468);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 18);
-            this.label14.TabIndex = 38;
-            this.label14.Text = "Suivie";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.lbSuivie.AutoSize = true;
+            this.lbSuivie.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.lbSuivie.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSuivie.ForeColor = System.Drawing.Color.White;
+            this.lbSuivie.Location = new System.Drawing.Point(64, 468);
+            this.lbSuivie.Name = "lbSuivie";
+            this.lbSuivie.Size = new System.Drawing.Size(56, 18);
+            this.lbSuivie.TabIndex = 38;
+            this.lbSuivie.Text = "Suivie";
             // 
-            // pictureBox7
+            // pbSuivie
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(11, 450);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(48, 57);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 37;
-            this.pictureBox7.TabStop = false;
+            this.pbSuivie.Image = ((System.Drawing.Image)(resources.GetObject("pbSuivie.Image")));
+            this.pbSuivie.Location = new System.Drawing.Point(11, 450);
+            this.pbSuivie.Name = "pbSuivie";
+            this.pbSuivie.Size = new System.Drawing.Size(48, 57);
+            this.pbSuivie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSuivie.TabIndex = 37;
+            this.pbSuivie.TabStop = false;
             // 
-            // label13
+            // lbDeconnection
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(45, 647);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 18);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Deconnexion";
+            this.lbDeconnection.AutoSize = true;
+            this.lbDeconnection.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.lbDeconnection.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDeconnection.ForeColor = System.Drawing.Color.White;
+            this.lbDeconnection.Location = new System.Drawing.Point(45, 647);
+            this.lbDeconnection.Name = "lbDeconnection";
+            this.lbDeconnection.Size = new System.Drawing.Size(112, 18);
+            this.lbDeconnection.TabIndex = 36;
+            this.lbDeconnection.Text = "Deconnexion";
             // 
-            // pictureBox6
+            // pbDeconnection
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(11, 629);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(29, 57);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 35;
-            this.pictureBox6.TabStop = false;
+            this.pbDeconnection.Image = ((System.Drawing.Image)(resources.GetObject("pbDeconnection.Image")));
+            this.pbDeconnection.Location = new System.Drawing.Point(11, 629);
+            this.pbDeconnection.Name = "pbDeconnection";
+            this.pbDeconnection.Size = new System.Drawing.Size(29, 57);
+            this.pbDeconnection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDeconnection.TabIndex = 35;
+            this.pbDeconnection.TabStop = false;
             // 
-            // label12
+            // lbModels
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(64, 406);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 18);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "Models";
+            this.lbModels.AutoSize = true;
+            this.lbModels.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.lbModels.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbModels.ForeColor = System.Drawing.Color.White;
+            this.lbModels.Location = new System.Drawing.Point(64, 406);
+            this.lbModels.Name = "lbModels";
+            this.lbModels.Size = new System.Drawing.Size(64, 18);
+            this.lbModels.TabIndex = 34;
+            this.lbModels.Text = "Models";
             // 
-            // pictureBox5
+            // pbModels
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(11, 387);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(48, 57);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 33;
-            this.pictureBox5.TabStop = false;
+            this.pbModels.Image = ((System.Drawing.Image)(resources.GetObject("pbModels.Image")));
+            this.pbModels.Location = new System.Drawing.Point(11, 387);
+            this.pbModels.Name = "pbModels";
+            this.pbModels.Size = new System.Drawing.Size(48, 57);
+            this.pbModels.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbModels.TabIndex = 33;
+            this.pbModels.TabStop = false;
             // 
-            // label11
+            // lbMesure
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(64, 338);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 18);
-            this.label11.TabIndex = 32;
-            this.label11.Text = "Mesure";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.lbMesure.AutoSize = true;
+            this.lbMesure.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.lbMesure.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMesure.ForeColor = System.Drawing.Color.White;
+            this.lbMesure.Location = new System.Drawing.Point(64, 338);
+            this.lbMesure.Name = "lbMesure";
+            this.lbMesure.Size = new System.Drawing.Size(67, 18);
+            this.lbMesure.TabIndex = 32;
+            this.lbMesure.Text = "Mesure";
             // 
-            // pictureBox4
+            // pbMesure
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(11, 323);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 31;
-            this.pictureBox4.TabStop = false;
+            this.pbMesure.Image = ((System.Drawing.Image)(resources.GetObject("pbMesure.Image")));
+            this.pbMesure.Location = new System.Drawing.Point(11, 323);
+            this.pbMesure.Name = "pbMesure";
+            this.pbMesure.Size = new System.Drawing.Size(48, 57);
+            this.pbMesure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMesure.TabIndex = 31;
+            this.pbMesure.TabStop = false;
             // 
-            // label10
+            // lbClients
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(64, 280);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 18);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Clients";
+            this.lbClients.AutoSize = true;
+            this.lbClients.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.lbClients.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClients.ForeColor = System.Drawing.Color.White;
+            this.lbClients.Location = new System.Drawing.Point(64, 280);
+            this.lbClients.Name = "lbClients";
+            this.lbClients.Size = new System.Drawing.Size(63, 18);
+            this.lbClients.TabIndex = 30;
+            this.lbClients.Text = "Clients";
             // 
-            // pictureBox3
+            // pbClients
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 260);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 57);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 29;
-            this.pictureBox3.TabStop = false;
+            this.pbClients.Image = ((System.Drawing.Image)(resources.GetObject("pbClients.Image")));
+            this.pbClients.Location = new System.Drawing.Point(11, 260);
+            this.pbClients.Name = "pbClients";
+            this.pbClients.Size = new System.Drawing.Size(48, 57);
+            this.pbClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClients.TabIndex = 29;
+            this.pbClients.TabStop = false;
             // 
-            // pictureBox2
+            // pbLogo
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(11, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(122, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(11, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(122, 116);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 28;
+            this.pbLogo.TabStop = false;
             // 
             // panel2
             // 
@@ -296,7 +294,6 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 38;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // label1
             // 
@@ -308,7 +305,6 @@
             this.label1.Size = new System.Drawing.Size(441, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Clients Sewing Management Application MAFConcept";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -320,7 +316,6 @@
             this.label2.Size = new System.Drawing.Size(121, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Gestion Clients";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbClientNom
             // 
@@ -329,7 +324,6 @@
             this.tbClientNom.Name = "tbClientNom";
             this.tbClientNom.Size = new System.Drawing.Size(194, 28);
             this.tbClientNom.TabIndex = 4;
-            this.tbClientNom.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -431,143 +425,143 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Adresse";
             // 
-            // button7
+            // btnEnregistrerClient
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEnregistrerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button7.CausesValidation = false;
-            this.button7.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button7.Enabled = false;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.Window;
-            this.button7.Location = new System.Drawing.Point(887, 70);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(119, 29);
-            this.button7.TabIndex = 22;
-            this.button7.TabStop = false;
-            this.button7.Text = "Enregistrer";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnEnregistrerClient.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEnregistrerClient.CausesValidation = false;
+            this.btnEnregistrerClient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnEnregistrerClient.Enabled = false;
+            this.btnEnregistrerClient.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnEnregistrerClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrerClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrerClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnregistrerClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnregistrerClient.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEnregistrerClient.Location = new System.Drawing.Point(887, 70);
+            this.btnEnregistrerClient.Name = "btnEnregistrerClient";
+            this.btnEnregistrerClient.Size = new System.Drawing.Size(119, 29);
+            this.btnEnregistrerClient.TabIndex = 22;
+            this.btnEnregistrerClient.TabStop = false;
+            this.btnEnregistrerClient.Text = "Enregistrer";
+            this.btnEnregistrerClient.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnDeleteClient
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnDeleteClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.CausesValidation = false;
-            this.button1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(887, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 27);
-            this.button1.TabIndex = 23;
-            this.button1.TabStop = false;
-            this.button1.Text = "Supprimer";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDeleteClient.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDeleteClient.CausesValidation = false;
+            this.btnDeleteClient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnDeleteClient.Enabled = false;
+            this.btnDeleteClient.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteClient.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDeleteClient.Location = new System.Drawing.Point(887, 141);
+            this.btnDeleteClient.Name = "btnDeleteClient";
+            this.btnDeleteClient.Size = new System.Drawing.Size(119, 27);
+            this.btnDeleteClient.TabIndex = 23;
+            this.btnDeleteClient.TabStop = false;
+            this.btnDeleteClient.Text = "Supprimer";
+            this.btnDeleteClient.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnUpdateClient
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnUpdateClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.CausesValidation = false;
-            this.button2.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(887, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 29);
-            this.button2.TabIndex = 24;
-            this.button2.TabStop = false;
-            this.button2.Text = "Modifier";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUpdateClient.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdateClient.CausesValidation = false;
+            this.btnUpdateClient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnUpdateClient.Enabled = false;
+            this.btnUpdateClient.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateClient.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUpdateClient.Location = new System.Drawing.Point(887, 106);
+            this.btnUpdateClient.Name = "btnUpdateClient";
+            this.btnUpdateClient.Size = new System.Drawing.Size(119, 29);
+            this.btnUpdateClient.TabIndex = 24;
+            this.btnUpdateClient.TabStop = false;
+            this.btnUpdateClient.Text = "Modifier";
+            this.btnUpdateClient.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnMesureClient
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnMesureClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.CausesValidation = false;
-            this.button3.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(1012, 106);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 29);
-            this.button3.TabIndex = 25;
-            this.button3.TabStop = false;
-            this.button3.Text = "Mesure";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnMesureClient.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnMesureClient.CausesValidation = false;
+            this.btnMesureClient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnMesureClient.Enabled = false;
+            this.btnMesureClient.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnMesureClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMesureClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMesureClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesureClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMesureClient.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnMesureClient.Location = new System.Drawing.Point(1012, 106);
+            this.btnMesureClient.Name = "btnMesureClient";
+            this.btnMesureClient.Size = new System.Drawing.Size(119, 29);
+            this.btnMesureClient.TabIndex = 25;
+            this.btnMesureClient.TabStop = false;
+            this.btnMesureClient.Text = "Mesure";
+            this.btnMesureClient.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnSearchClient
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSearchClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.CausesValidation = false;
-            this.button4.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button4.Enabled = false;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(1012, 70);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 29);
-            this.button4.TabIndex = 26;
-            this.button4.TabStop = false;
-            this.button4.Text = "Recherche";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSearchClient.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSearchClient.CausesValidation = false;
+            this.btnSearchClient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnSearchClient.Enabled = false;
+            this.btnSearchClient.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnSearchClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSearchClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSearchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchClient.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSearchClient.Location = new System.Drawing.Point(1012, 70);
+            this.btnSearchClient.Name = "btnSearchClient";
+            this.btnSearchClient.Size = new System.Drawing.Size(119, 29);
+            this.btnSearchClient.TabIndex = 26;
+            this.btnSearchClient.TabStop = false;
+            this.btnSearchClient.Text = "Recherche";
+            this.btnSearchClient.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnModeleClient
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnModeleClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button5.CausesValidation = false;
-            this.button5.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button5.Enabled = false;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Window;
-            this.button5.Location = new System.Drawing.Point(1012, 141);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 27);
-            this.button5.TabIndex = 27;
-            this.button5.TabStop = false;
-            this.button5.Text = "Modele";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnModeleClient.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnModeleClient.CausesValidation = false;
+            this.btnModeleClient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnModeleClient.Enabled = false;
+            this.btnModeleClient.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnModeleClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnModeleClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnModeleClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModeleClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModeleClient.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnModeleClient.Location = new System.Drawing.Point(1012, 141);
+            this.btnModeleClient.Name = "btnModeleClient";
+            this.btnModeleClient.Size = new System.Drawing.Size(119, 27);
+            this.btnModeleClient.TabIndex = 27;
+            this.btnModeleClient.TabStop = false;
+            this.btnModeleClient.Text = "Modele";
+            this.btnModeleClient.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -589,19 +583,17 @@
             this.dgvListClient.Name = "dgvListClient";
             this.dgvListClient.Size = new System.Drawing.Size(983, 463);
             this.dgvListClient.TabIndex = 29;
-            this.dgvListClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label9
+            // lbListClients
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Matura MT Script Capitals", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label9.Location = new System.Drawing.Point(600, 194);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 22);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Listes des Clients";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.lbListClients.AutoSize = true;
+            this.lbListClients.Font = new System.Drawing.Font("Matura MT Script Capitals", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbListClients.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lbListClients.Location = new System.Drawing.Point(600, 194);
+            this.lbListClients.Name = "lbListClients";
+            this.lbListClients.Size = new System.Drawing.Size(147, 22);
+            this.lbListClients.TabIndex = 30;
+            this.lbListClients.Text = "Listes des Clients";
             // 
             // cbxClientSexe
             // 
@@ -613,6 +605,7 @@
             this.cbxClientSexe.Name = "cbxClientSexe";
             this.cbxClientSexe.Size = new System.Drawing.Size(194, 28);
             this.cbxClientSexe.TabIndex = 31;
+            this.cbxClientSexe.SelectedIndexChanged += new System.EventHandler(this.cbxClientSexe_SelectedIndexChanged);
             // 
             // Clients
             // 
@@ -623,15 +616,15 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1168, 699);
             this.Controls.Add(this.cbxClientSexe);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbListClients);
             this.Controls.Add(this.dgvListClient);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnModeleClient);
+            this.Controls.Add(this.btnSearchClient);
+            this.Controls.Add(this.btnMesureClient);
+            this.Controls.Add(this.btnUpdateClient);
+            this.Controls.Add(this.btnDeleteClient);
+            this.Controls.Add(this.btnEnregistrerClient);
             this.Controls.Add(this.tbClientAdress);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -654,13 +647,13 @@
             this.Text = "  ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuivie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeconnection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbModels)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMesure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -689,28 +682,28 @@
         private System.Windows.Forms.TextBox tbClientPrenom;
         private System.Windows.Forms.TextBox tbClientAdress;
         private System.Windows.Forms.Label label8;
-        internal System.Windows.Forms.Button button7;
-        internal System.Windows.Forms.Button button1;
-        internal System.Windows.Forms.Button button2;
-        internal System.Windows.Forms.Button button3;
-        internal System.Windows.Forms.Button button4;
-        internal System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        internal System.Windows.Forms.Button btnEnregistrerClient;
+        internal System.Windows.Forms.Button btnDeleteClient;
+        internal System.Windows.Forms.Button btnUpdateClient;
+        internal System.Windows.Forms.Button btnMesureClient;
+        internal System.Windows.Forms.Button btnSearchClient;
+        internal System.Windows.Forms.Button btnModeleClient;
+        private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvListClient;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label lbListClients;
+        private System.Windows.Forms.Label lbDeconnection;
+        private System.Windows.Forms.PictureBox pbDeconnection;
+        private System.Windows.Forms.Label lbModels;
+        private System.Windows.Forms.PictureBox pbModels;
+        private System.Windows.Forms.Label lbMesure;
+        private System.Windows.Forms.PictureBox pbMesure;
+        private System.Windows.Forms.Label lbClients;
+        private System.Windows.Forms.PictureBox pbClients;
+        private System.Windows.Forms.Label lbSuivie;
+        private System.Windows.Forms.PictureBox pbSuivie;
+        private System.Windows.Forms.Label lbHome;
+        private System.Windows.Forms.PictureBox pbHome;
         private System.Windows.Forms.ComboBox cbxClientSexe;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox11;

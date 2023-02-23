@@ -89,6 +89,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListClient)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -762,7 +764,7 @@
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(583, 75);
+            this.textBox15.Location = new System.Drawing.Point(462, 75);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(181, 20);
             this.textBox15.TabIndex = 81;
@@ -774,11 +776,31 @@
             this.label26.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(580, 55);
+            this.label26.Location = new System.Drawing.Point(459, 55);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(46, 15);
             this.label26.TabIndex = 80;
             this.label26.Text = "Client";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(689, 75);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(181, 20);
+            this.textBox16.TabIndex = 83;
+            this.textBox16.Text = " ";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label27.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(686, 55);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(46, 15);
+            this.label27.TabIndex = 82;
+            this.label27.Text = "Model";
             // 
             // Mesures
             // 
@@ -786,6 +808,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1168, 699);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.label27);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.textBox13);
@@ -915,5 +939,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label27;
     }
 }

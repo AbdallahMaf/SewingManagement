@@ -87,11 +87,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(450, 0);
+            this.label1.Location = new System.Drawing.Point(393, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(441, 22);
+            this.label1.Size = new System.Drawing.Size(561, 22);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Clients Sewing Management Application MAFConcept";
+            this.label1.Text = "Gestion des Commandes Sewing Management Application MAFConcept";
             // 
             // label2
             // 

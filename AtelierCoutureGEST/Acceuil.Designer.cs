@@ -264,7 +264,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(1087, 3);
+            this.pictureBox12.Location = new System.Drawing.Point(1095, 3);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(23, 18);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -275,7 +275,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(1116, 3);
+            this.pictureBox11.Location = new System.Drawing.Point(1118, 3);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(20, 18);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,7 +286,7 @@
             // 
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(1142, 0);
+            this.pbClose.Location = new System.Drawing.Point(1138, 0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(26, 21);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

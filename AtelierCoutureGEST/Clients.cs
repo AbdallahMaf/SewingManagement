@@ -21,5 +21,10 @@ namespace AtelierCoutureGEST
         {
 
         }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

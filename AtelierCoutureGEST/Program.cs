@@ -16,7 +16,7 @@ namespace AtelierCoutureGEST
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mesures());
+            Application.Run(new Acceuil());
         }
     }
 }

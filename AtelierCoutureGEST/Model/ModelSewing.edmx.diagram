@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d0519a44af94c52b1be85d1a40b8567" Name="Diagram1">
+        <EntityTypeShape EntityType="CoutureSewingDBModel.Client" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="CoutureSewingDBModel.Commande" Width="1.5" PointX="3" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="CoutureSewingDBModel.Modeles" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="false" />
+        <AssociationConnector Association="CoutureSewingDBModel.fK1" ManuallyRouted="false" />
+        <AssociationConnector Association="CoutureSewingDBModel.fK2" ManuallyRouted="false" />
+        <AssociationConnector Association="CoutureSewingDBModel.fK3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

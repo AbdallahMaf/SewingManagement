@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CoutureSewingDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomClient" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrenomClient" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SexeClient" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="AdressClient" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CNIClient" Type="int" Nullable="false" />
+          <Property Name="TelClient" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Commande">
+          <Key>
+            <PropertyRef Name="IdCommande" />
+          </Key>
+          <Property Name="IdCommande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientComm" Type="int" Nullable="false" />
+          <Property Name="AdressComm" Type="int" Nullable="false" />
+          <Property Name="ModelComm" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateCommande" Type="date" Nullable="false" />
+          <Property Name="DateLivraison" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Modeles">
+          <Key>
+            <PropertyRef Name="IdModel" />
+          </Key>
+          <Property Name="IdModel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomModele" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <Association Name="fK1">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Commande">
+              <PropertyRef Name="ClientComm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fK2">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Commande">
+              <PropertyRef Name="AdressComm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fK3">
+          <End Role="Modeles" Type="Self.Modeles" Multiplicity="1" />
+          <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modeles">
+              <PropertyRef Name="IdModel" />
+            </Principal>
+            <Dependent Role="Commande">
+              <PropertyRef Name="ModelComm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CoutureSewingDBModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Commande" EntityType="Self.Commande" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Modeles" EntityType="Self.Modeles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fK1" Association="Self.fK1">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Commande" EntitySet="Commande" />
+          </AssociationSet>
+          <AssociationSet Name="fK2" Association="Self.fK2">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Commande" EntitySet="Commande" />
+          </AssociationSet>
+          <AssociationSet Name="fK3" Association="Self.fK3">
+            <End Role="Modeles" EntitySet="Modeles" />
+            <End Role="Commande" EntitySet="Commande" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CoutureSewingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="IdClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomClient" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PrenomClient" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SexeClient" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdressClient" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CNIClient" Type="Int32" Nullable="false" />
+          <Property Name="TelClient" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Commande" Relationship="Self.fK1" FromRole="Client" ToRole="Commande" />
+          <NavigationProperty Name="Commande1" Relationship="Self.fK2" FromRole="Client" ToRole="Commande" />
+        </EntityType>
+        <EntityType Name="Commande">
+          <Key>
+            <PropertyRef Name="IdCommande" />
+          </Key>
+          <Property Name="IdCommande" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientComm" Type="Int32" Nullable="false" />
+          <Property Name="AdressComm" Type="Int32" Nullable="false" />
+          <Property Name="ModelComm" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DateCommande" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateLivraison" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Client" Relationship="Self.fK1" FromRole="Commande" ToRole="Client" />
+          <NavigationProperty Name="Client1" Relationship="Self.fK2" FromRole="Commande" ToRole="Client" />
+          <NavigationProperty Name="Modeles" Relationship="Self.fK3" FromRole="Commande" ToRole="Modeles" />
+        </EntityType>
+        <EntityType Name="Modeles">
+          <Key>
+            <PropertyRef Name="IdModel" />
+          </Key>
+          <Property Name="IdModel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomModele" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Commande" Relationship="Self.fK3" FromRole="Modeles" ToRole="Commande" />
+        </EntityType>
+        <Association Name="fK1">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Commande">
+              <PropertyRef Name="ClientComm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fK2">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Commande">
+              <PropertyRef Name="AdressComm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fK3">
+          <End Role="Modeles" Type="Self.Modeles" Multiplicity="1" />
+          <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modeles">
+              <PropertyRef Name="IdModel" />
+            </Principal>
+            <Dependent Role="Commande">
+              <PropertyRef Name="ModelComm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CoutureSewingDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Commande" EntityType="Self.Commande" />
+          <EntitySet Name="Modeles" EntityType="Self.Modeles" />
+          <AssociationSet Name="fK1" Association="Self.fK1">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Commande" EntitySet="Commande" />
+          </AssociationSet>
+          <AssociationSet Name="fK2" Association="Self.fK2">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Commande" EntitySet="Commande" />
+          </AssociationSet>
+          <AssociationSet Name="fK3" Association="Self.fK3">
+            <End Role="Modeles" EntitySet="Modeles" />
+            <End Role="Commande" EntitySet="Commande" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CoutureSewingDBModelStoreContainer" CdmEntityContainer="CoutureSewingDBEntities">
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="CoutureSewingDBModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="NomClient" ColumnName="NomClient" />
+                <ScalarProperty Name="PrenomClient" ColumnName="PrenomClient" />
+                <ScalarProperty Name="SexeClient" ColumnName="SexeClient" />
+                <ScalarProperty Name="AdressClient" ColumnName="AdressClient" />
+                <ScalarProperty Name="CNIClient" ColumnName="CNIClient" />
+                <ScalarProperty Name="TelClient" ColumnName="TelClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Commande">
+            <EntityTypeMapping TypeName="CoutureSewingDBModel.Commande">
+              <MappingFragment StoreEntitySet="Commande">
+                <ScalarProperty Name="IdCommande" ColumnName="IdCommande" />
+                <ScalarProperty Name="ClientComm" ColumnName="ClientComm" />
+                <ScalarProperty Name="AdressComm" ColumnName="AdressComm" />
+                <ScalarProperty Name="ModelComm" ColumnName="ModelComm" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DateCommande" ColumnName="DateCommande" />
+                <ScalarProperty Name="DateLivraison" ColumnName="DateLivraison" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modeles">
+            <EntityTypeMapping TypeName="CoutureSewingDBModel.Modeles">
+              <MappingFragment StoreEntitySet="Modeles">
+                <ScalarProperty Name="IdModel" ColumnName="IdModel" />
+                <ScalarProperty Name="NomModele" ColumnName="NomModele" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

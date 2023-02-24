@@ -28,5 +28,6 @@ namespace AtelierCoutureGEST.Model
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Commande> Commande { get; set; }
         public virtual DbSet<Modeles> Modeles { get; set; }
+        public virtual DbSet<Mesure> Mesure { get; set; }
     }
 }

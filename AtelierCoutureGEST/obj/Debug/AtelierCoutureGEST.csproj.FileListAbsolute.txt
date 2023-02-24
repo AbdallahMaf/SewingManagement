@@ -14,3 +14,8 @@ C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\Atel
 C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.Mesures.resources
 C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.SuiviCommande.resources
 C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.Modeles.resources
+C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\bin\Debug\EntityFramework.dll
+C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\bin\Debug\EntityFramework.xml
+C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\Source\Repos\AtelierCoutureGEST\AtelierCoutureGEST\obj\Debug\AtelierCoutureGEST.csproj.CopyComplete

@@ -18,6 +18,7 @@ namespace AtelierCoutureGEST.Model
         public Modeles()
         {
             this.Commande = new HashSet<Commande>();
+            this.Mesure = new HashSet<Mesure>();
         }
     
         public int IdModel { get; set; }
@@ -25,5 +26,7 @@ namespace AtelierCoutureGEST.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Commande> Commande { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Mesure> Mesure { get; set; }
     }
 }

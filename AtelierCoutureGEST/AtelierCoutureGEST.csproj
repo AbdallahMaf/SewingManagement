@@ -91,6 +91,9 @@
     <Compile Include="Model\Commande.cs">
       <DependentUpon>ModelSewing.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Mesure.cs">
+      <DependentUpon>ModelSewing.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Modeles.cs">
       <DependentUpon>ModelSewing.tt</DependentUpon>
     </Compile>

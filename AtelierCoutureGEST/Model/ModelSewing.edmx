@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CoutureSewingDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CoutureSewingDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="IdClient" />
@@ -29,6 +29,30 @@
           <Property Name="DateCommande" Type="date" Nullable="false" />
           <Property Name="DateLivraison" Type="date" Nullable="false" />
         </EntityType>
+        <EntityType Name="Mesure">
+          <Key>
+            <PropertyRef Name="IdMes" />
+          </Key>
+          <Property Name="IdMes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientMes" Type="int" Nullable="false" />
+          <Property Name="ModelMes" Type="int" Nullable="false" />
+          <Property Name="Tete" Type="float" Nullable="false" />
+          <Property Name="Cou" Type="float" Nullable="false" />
+          <Property Name="Epaule" Type="float" Nullable="false" />
+          <Property Name="Bras" Type="float" Nullable="false" />
+          <Property Name="Poitrine" Type="float" Nullable="false" />
+          <Property Name="Hanche" Type="float" Nullable="false" />
+          <Property Name="Lcorps" Type="float" Nullable="false" />
+          <Property Name="CoutureExt" Type="float" Nullable="false" />
+          <Property Name="Genoux" Type="float" Nullable="false" />
+          <Property Name="Mollets" Type="float" Nullable="false" />
+          <Property Name="Cheville" Type="float" Nullable="false" />
+          <Property Name="Biceps" Type="float" Nullable="false" />
+          <Property Name="Coude" Type="float" Nullable="false" />
+          <Property Name="AvantBras" Type="int" Nullable="false" />
+          <Property Name="PoigneCoude" Type="float" Nullable="false" />
+          <Property Name="Hauteur" Type="float" Nullable="false" />
+        </EntityType>
         <EntityType Name="Modeles">
           <Key>
             <PropertyRef Name="IdModel" />
@@ -48,6 +72,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK1_Mesure_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Mesure" Type="Self.Mesure" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Mesure">
+              <PropertyRef Name="ClientMes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fK2">
           <End Role="Client" Type="Self.Client" Multiplicity="1" />
           <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
@@ -57,6 +93,18 @@
             </Principal>
             <Dependent Role="Commande">
               <PropertyRef Name="AdressComm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK2_Mesure_Modeles">
+          <End Role="Modeles" Type="Self.Modeles" Multiplicity="1" />
+          <End Role="Mesure" Type="Self.Mesure" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modeles">
+              <PropertyRef Name="IdModel" />
+            </Principal>
+            <Dependent Role="Mesure">
+              <PropertyRef Name="ModelMes" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -75,22 +123,30 @@
         <EntityContainer Name="CoutureSewingDBModelStoreContainer">
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Commande" EntityType="Self.Commande" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mesure" EntityType="Self.Mesure" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Modeles" EntityType="Self.Modeles" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="fK1" Association="Self.fK1">
             <End Role="Client" EntitySet="Client" />
             <End Role="Commande" EntitySet="Commande" />
           </AssociationSet>
+          <AssociationSet Name="FK1_Mesure_Client" Association="Self.FK1_Mesure_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Mesure" EntitySet="Mesure" />
+          </AssociationSet>
           <AssociationSet Name="fK2" Association="Self.fK2">
             <End Role="Client" EntitySet="Client" />
             <End Role="Commande" EntitySet="Commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK2_Mesure_Modeles" Association="Self.FK2_Mesure_Modeles">
+            <End Role="Modeles" EntitySet="Modeles" />
+            <End Role="Mesure" EntitySet="Mesure" />
           </AssociationSet>
           <AssociationSet Name="fK3" Association="Self.fK3">
             <End Role="Modeles" EntitySet="Modeles" />
             <End Role="Commande" EntitySet="Commande" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CoutureSewingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -107,6 +163,7 @@
           <Property Name="TelClient" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Commande" Relationship="Self.fK1" FromRole="Client" ToRole="Commande" />
           <NavigationProperty Name="Commande1" Relationship="Self.fK2" FromRole="Client" ToRole="Commande" />
+          <NavigationProperty Name="Mesure" Relationship="CoutureSewingDBModel.FK1_Mesure_Client" FromRole="Client" ToRole="Mesure" />
         </EntityType>
         <EntityType Name="Commande">
           <Key>
@@ -130,6 +187,7 @@
           <Property Name="IdModel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NomModele" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Commande" Relationship="Self.fK3" FromRole="Modeles" ToRole="Commande" />
+          <NavigationProperty Name="Mesure" Relationship="CoutureSewingDBModel.FK2_Mesure_Modeles" FromRole="Modeles" ToRole="Mesure" />
         </EntityType>
         <Association Name="fK1">
           <End Role="Client" Type="Self.Client" Multiplicity="1" />
@@ -183,7 +241,66 @@
             <End Role="Modeles" EntitySet="Modeles" />
             <End Role="Commande" EntitySet="Commande" />
           </AssociationSet>
+          <EntitySet Name="Mesure" EntityType="CoutureSewingDBModel.Mesure" />
+          <AssociationSet Name="FK1_Mesure_Client" Association="CoutureSewingDBModel.FK1_Mesure_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Mesure" EntitySet="Mesure" />
+          </AssociationSet>
+          <AssociationSet Name="FK2_Mesure_Modeles" Association="CoutureSewingDBModel.FK2_Mesure_Modeles">
+            <End Role="Modeles" EntitySet="Modeles" />
+            <End Role="Mesure" EntitySet="Mesure" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Mesure">
+          <Key>
+            <PropertyRef Name="IdMes" />
+          </Key>
+          <Property Name="IdMes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientMes" Type="Int32" Nullable="false" />
+          <Property Name="ModelMes" Type="Int32" Nullable="false" />
+          <Property Name="Tete" Type="Double" Nullable="false" />
+          <Property Name="Cou" Type="Double" Nullable="false" />
+          <Property Name="Epaule" Type="Double" Nullable="false" />
+          <Property Name="Bras" Type="Double" Nullable="false" />
+          <Property Name="Poitrine" Type="Double" Nullable="false" />
+          <Property Name="Hanche" Type="Double" Nullable="false" />
+          <Property Name="Lcorps" Type="Double" Nullable="false" />
+          <Property Name="CoutureExt" Type="Double" Nullable="false" />
+          <Property Name="Genoux" Type="Double" Nullable="false" />
+          <Property Name="Mollets" Type="Double" Nullable="false" />
+          <Property Name="Cheville" Type="Double" Nullable="false" />
+          <Property Name="Biceps" Type="Double" Nullable="false" />
+          <Property Name="Coude" Type="Double" Nullable="false" />
+          <Property Name="AvantBras" Type="Int32" Nullable="false" />
+          <Property Name="PoigneCoude" Type="Double" Nullable="false" />
+          <Property Name="Hauteur" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="CoutureSewingDBModel.FK1_Mesure_Client" FromRole="Mesure" ToRole="Client" />
+          <NavigationProperty Name="Modeles" Relationship="CoutureSewingDBModel.FK2_Mesure_Modeles" FromRole="Mesure" ToRole="Modeles" />
+        </EntityType>
+        <Association Name="FK1_Mesure_Client">
+          <End Type="CoutureSewingDBModel.Client" Role="Client" Multiplicity="1" />
+          <End Type="CoutureSewingDBModel.Mesure" Role="Mesure" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Mesure">
+              <PropertyRef Name="ClientMes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK2_Mesure_Modeles">
+          <End Type="CoutureSewingDBModel.Modeles" Role="Modeles" Multiplicity="1" />
+          <End Type="CoutureSewingDBModel.Mesure" Role="Mesure" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modeles">
+              <PropertyRef Name="IdModel" />
+            </Principal>
+            <Dependent Role="Mesure">
+              <PropertyRef Name="ModelMes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -221,6 +338,31 @@
               <MappingFragment StoreEntitySet="Modeles">
                 <ScalarProperty Name="IdModel" ColumnName="IdModel" />
                 <ScalarProperty Name="NomModele" ColumnName="NomModele" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mesure">
+            <EntityTypeMapping TypeName="CoutureSewingDBModel.Mesure">
+              <MappingFragment StoreEntitySet="Mesure">
+                <ScalarProperty Name="Hauteur" ColumnName="Hauteur" />
+                <ScalarProperty Name="PoigneCoude" ColumnName="PoigneCoude" />
+                <ScalarProperty Name="AvantBras" ColumnName="AvantBras" />
+                <ScalarProperty Name="Coude" ColumnName="Coude" />
+                <ScalarProperty Name="Biceps" ColumnName="Biceps" />
+                <ScalarProperty Name="Cheville" ColumnName="Cheville" />
+                <ScalarProperty Name="Mollets" ColumnName="Mollets" />
+                <ScalarProperty Name="Genoux" ColumnName="Genoux" />
+                <ScalarProperty Name="CoutureExt" ColumnName="CoutureExt" />
+                <ScalarProperty Name="Lcorps" ColumnName="Lcorps" />
+                <ScalarProperty Name="Hanche" ColumnName="Hanche" />
+                <ScalarProperty Name="Poitrine" ColumnName="Poitrine" />
+                <ScalarProperty Name="Bras" ColumnName="Bras" />
+                <ScalarProperty Name="Epaule" ColumnName="Epaule" />
+                <ScalarProperty Name="Cou" ColumnName="Cou" />
+                <ScalarProperty Name="Tete" ColumnName="Tete" />
+                <ScalarProperty Name="ModelMes" ColumnName="ModelMes" />
+                <ScalarProperty Name="ClientMes" ColumnName="ClientMes" />
+                <ScalarProperty Name="IdMes" ColumnName="IdMes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

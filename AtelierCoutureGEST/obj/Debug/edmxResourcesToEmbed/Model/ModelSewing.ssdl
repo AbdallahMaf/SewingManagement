@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CoutureSewingDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="IdClient" />
+    </Key>
+    <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomClient" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrenomClient" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SexeClient" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="AdressClient" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CNIClient" Type="int" Nullable="false" />
+    <Property Name="TelClient" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Commande">
+    <Key>
+      <PropertyRef Name="IdCommande" />
+    </Key>
+    <Property Name="IdCommande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientComm" Type="int" Nullable="false" />
+    <Property Name="AdressComm" Type="int" Nullable="false" />
+    <Property Name="ModelComm" Type="int" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateCommande" Type="date" Nullable="false" />
+    <Property Name="DateLivraison" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mesure">
+    <Key>
+      <PropertyRef Name="IdMes" />
+    </Key>
+    <Property Name="IdMes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientMes" Type="int" Nullable="false" />
+    <Property Name="ModelMes" Type="int" Nullable="false" />
+    <Property Name="Tete" Type="float" Nullable="false" />
+    <Property Name="Cou" Type="float" Nullable="false" />
+    <Property Name="Epaule" Type="float" Nullable="false" />
+    <Property Name="Bras" Type="float" Nullable="false" />
+    <Property Name="Poitrine" Type="float" Nullable="false" />
+    <Property Name="Hanche" Type="float" Nullable="false" />
+    <Property Name="Lcorps" Type="float" Nullable="false" />
+    <Property Name="CoutureExt" Type="float" Nullable="false" />
+    <Property Name="Genoux" Type="float" Nullable="false" />
+    <Property Name="Mollets" Type="float" Nullable="false" />
+    <Property Name="Cheville" Type="float" Nullable="false" />
+    <Property Name="Biceps" Type="float" Nullable="false" />
+    <Property Name="Coude" Type="float" Nullable="false" />
+    <Property Name="AvantBras" Type="int" Nullable="false" />
+    <Property Name="PoigneCoude" Type="float" Nullable="false" />
+    <Property Name="Hauteur" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modeles">
+    <Key>
+      <PropertyRef Name="IdModel" />
+    </Key>
+    <Property Name="IdModel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomModele" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <Association Name="fK1">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="IdClient" />
+      </Principal>
+      <Dependent Role="Commande">
+        <PropertyRef Name="ClientComm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK1_Mesure_Client">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Mesure" Type="Self.Mesure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="IdClient" />
+      </Principal>
+      <Dependent Role="Mesure">
+        <PropertyRef Name="ClientMes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fK2">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="IdClient" />
+      </Principal>
+      <Dependent Role="Commande">
+        <PropertyRef Name="AdressComm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK2_Mesure_Modeles">
+    <End Role="Modeles" Type="Self.Modeles" Multiplicity="1" />
+    <End Role="Mesure" Type="Self.Mesure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modeles">
+        <PropertyRef Name="IdModel" />
+      </Principal>
+      <Dependent Role="Mesure">
+        <PropertyRef Name="ModelMes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fK3">
+    <End Role="Modeles" Type="Self.Modeles" Multiplicity="1" />
+    <End Role="Commande" Type="Self.Commande" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modeles">
+        <PropertyRef Name="IdModel" />
+      </Principal>
+      <Dependent Role="Commande">
+        <PropertyRef Name="ModelComm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CoutureSewingDBModelStoreContainer">
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Commande" EntityType="Self.Commande" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mesure" EntityType="Self.Mesure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modeles" EntityType="Self.Modeles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fK1" Association="Self.fK1">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Commande" EntitySet="Commande" />
+    </AssociationSet>
+    <AssociationSet Name="FK1_Mesure_Client" Association="Self.FK1_Mesure_Client">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Mesure" EntitySet="Mesure" />
+    </AssociationSet>
+    <AssociationSet Name="fK2" Association="Self.fK2">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Commande" EntitySet="Commande" />
+    </AssociationSet>
+    <AssociationSet Name="FK2_Mesure_Modeles" Association="Self.FK2_Mesure_Modeles">
+      <End Role="Modeles" EntitySet="Modeles" />
+      <End Role="Mesure" EntitySet="Mesure" />
+    </AssociationSet>
+    <AssociationSet Name="fK3" Association="Self.fK3">
+      <End Role="Modeles" EntitySet="Modeles" />
+      <End Role="Commande" EntitySet="Commande" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

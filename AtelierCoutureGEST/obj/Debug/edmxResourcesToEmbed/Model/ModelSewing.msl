@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CoutureSewingDBModelStoreContainer" CdmEntityContainer="CoutureSewingDBEntities">
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="CoutureSewingDBModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="NomClient" ColumnName="NomClient" />
+          <ScalarProperty Name="PrenomClient" ColumnName="PrenomClient" />
+          <ScalarProperty Name="SexeClient" ColumnName="SexeClient" />
+          <ScalarProperty Name="AdressClient" ColumnName="AdressClient" />
+          <ScalarProperty Name="CNIClient" ColumnName="CNIClient" />
+          <ScalarProperty Name="TelClient" ColumnName="TelClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Commande">
+      <EntityTypeMapping TypeName="CoutureSewingDBModel.Commande">
+        <MappingFragment StoreEntitySet="Commande">
+          <ScalarProperty Name="IdCommande" ColumnName="IdCommande" />
+          <ScalarProperty Name="ClientComm" ColumnName="ClientComm" />
+          <ScalarProperty Name="AdressComm" ColumnName="AdressComm" />
+          <ScalarProperty Name="ModelComm" ColumnName="ModelComm" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateCommande" ColumnName="DateCommande" />
+          <ScalarProperty Name="DateLivraison" ColumnName="DateLivraison" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modeles">
+      <EntityTypeMapping TypeName="CoutureSewingDBModel.Modeles">
+        <MappingFragment StoreEntitySet="Modeles">
+          <ScalarProperty Name="IdModel" ColumnName="IdModel" />
+          <ScalarProperty Name="NomModele" ColumnName="NomModele" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mesure">
+      <EntityTypeMapping TypeName="CoutureSewingDBModel.Mesure">
+        <MappingFragment StoreEntitySet="Mesure">
+          <ScalarProperty Name="Hauteur" ColumnName="Hauteur" />
+          <ScalarProperty Name="PoigneCoude" ColumnName="PoigneCoude" />
+          <ScalarProperty Name="AvantBras" ColumnName="AvantBras" />
+          <ScalarProperty Name="Coude" ColumnName="Coude" />
+          <ScalarProperty Name="Biceps" ColumnName="Biceps" />
+          <ScalarProperty Name="Cheville" ColumnName="Cheville" />
+          <ScalarProperty Name="Mollets" ColumnName="Mollets" />
+          <ScalarProperty Name="Genoux" ColumnName="Genoux" />
+          <ScalarProperty Name="CoutureExt" ColumnName="CoutureExt" />
+          <ScalarProperty Name="Lcorps" ColumnName="Lcorps" />
+          <ScalarProperty Name="Hanche" ColumnName="Hanche" />
+          <ScalarProperty Name="Poitrine" ColumnName="Poitrine" />
+          <ScalarProperty Name="Bras" ColumnName="Bras" />
+          <ScalarProperty Name="Epaule" ColumnName="Epaule" />
+          <ScalarProperty Name="Cou" ColumnName="Cou" />
+          <ScalarProperty Name="Tete" ColumnName="Tete" />
+          <ScalarProperty Name="ModelMes" ColumnName="ModelMes" />
+          <ScalarProperty Name="ClientMes" ColumnName="ClientMes" />
+          <ScalarProperty Name="IdMes" ColumnName="IdMes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

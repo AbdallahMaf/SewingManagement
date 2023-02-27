@@ -13,10 +13,10 @@ namespace AtelierCoutureGEST.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CoutureSewingDBEntities : DbContext
+    public partial class CoutureSewingDBEntities1 : DbContext
     {
-        public CoutureSewingDBEntities()
-            : base("name=CoutureSewingDBEntities")
+        public CoutureSewingDBEntities1()
+            : base("name=CoutureSewingDBEntities1")
         {
         }
     
@@ -27,7 +27,7 @@ namespace AtelierCoutureGEST.Model
     
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Commande> Commande { get; set; }
-        public virtual DbSet<Modeles> Modeles { get; set; }
         public virtual DbSet<Mesure> Mesure { get; set; }
+        public virtual DbSet<Modeles> Modeles { get; set; }
     }
 }

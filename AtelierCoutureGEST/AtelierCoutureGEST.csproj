@@ -67,6 +67,11 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoutureSewingDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoutureSewingDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -87,31 +92,31 @@
       <DependentUpon>Modeles.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Client.cs">
-      <DependentUpon>ModelSewing.tt</DependentUpon>
+      <DependentUpon>ModelSewingManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Commande.cs">
-      <DependentUpon>ModelSewing.tt</DependentUpon>
+      <DependentUpon>ModelSewingManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Mesure.cs">
-      <DependentUpon>ModelSewing.tt</DependentUpon>
+      <DependentUpon>ModelSewingManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Modeles.cs">
-      <DependentUpon>ModelSewing.tt</DependentUpon>
+      <DependentUpon>ModelSewingManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelSewing.Context.cs">
+    <Compile Include="Model\ModelSewingManagement.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelSewing.Context.tt</DependentUpon>
+      <DependentUpon>ModelSewingManagement.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelSewing.cs">
+    <Compile Include="Model\ModelSewingManagement.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelSewing.tt</DependentUpon>
+      <DependentUpon>ModelSewingManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelSewing.Designer.cs">
+    <Compile Include="Model\ModelSewingManagement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelSewing.edmx</DependentUpon>
+      <DependentUpon>ModelSewingManagement.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,12 +154,23 @@
     <EmbeddedResource Include="SuiviCommande.resx">
       <DependentUpon>SuiviCommande.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\ModelSewing.edmx">
+    <None Include="CoutureSewingDBDataSet.xsc">
+      <DependentUpon>CoutureSewingDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CoutureSewingDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoutureSewingDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CoutureSewingDBDataSet.xss">
+      <DependentUpon>CoutureSewingDBDataSet.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model\ModelSewingManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelSewing.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelSewingManagement.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\ModelSewing.edmx.diagram">
-      <DependentUpon>ModelSewing.edmx</DependentUpon>
+    <None Include="Model\ModelSewingManagement.edmx.diagram">
+      <DependentUpon>ModelSewingManagement.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -183,19 +199,19 @@
     <None Include="Resources\2303165_cancel_close_delete_forbidden_off_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\ModelSewing.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelSewing.Context.cs</LastGenOutput>
-      <DependentUpon>ModelSewing.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\ModelSewing.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelSewing.edmx</DependentUpon>
-      <LastGenOutput>ModelSewing.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Model\ModelSewingManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSewingManagement.edmx</DependentUpon>
+      <LastGenOutput>ModelSewingManagement.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ModelSewingManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSewingManagement.edmx</DependentUpon>
+      <LastGenOutput>ModelSewingManagement.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

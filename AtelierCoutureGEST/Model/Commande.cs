@@ -23,7 +23,6 @@ namespace AtelierCoutureGEST.Model
         public System.DateTime DateLivraison { get; set; }
     
         public virtual Client Client { get; set; }
-        public virtual Client Client1 { get; set; }
         public virtual Modeles Modeles { get; set; }
     }
 }

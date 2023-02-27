@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modeles));
-            this.cbxClientSexe = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dgvListClient = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnEnregistrer = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -54,10 +52,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pbxClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListClient)).BeginInit();
+            this.tbModels = new System.Windows.Forms.TextBox();
+            this.dgvListModels = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -69,40 +68,20 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListModels)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbxClientSexe
-            // 
-            this.cbxClientSexe.FormattingEnabled = true;
-            this.cbxClientSexe.Location = new System.Drawing.Point(550, 96);
-            this.cbxClientSexe.Name = "cbxClientSexe";
-            this.cbxClientSexe.Size = new System.Drawing.Size(194, 21);
-            this.cbxClientSexe.TabIndex = 55;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Matura MT Script Capitals", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label9.Location = new System.Drawing.Point(598, 194);
+            this.label9.Location = new System.Drawing.Point(546, 197);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(162, 22);
             this.label9.TabIndex = 54;
             this.label9.Text = "Listes des Modeles";
-            // 
-            // dgvListClient
-            // 
-            this.dgvListClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvListClient.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvListClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListClient.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dgvListClient.Location = new System.Drawing.Point(173, 222);
-            this.dgvListClient.Name = "dgvListClient";
-            this.dgvListClient.Size = new System.Drawing.Size(983, 463);
-            this.dgvListClient.TabIndex = 53;
             // 
             // panel3
             // 
@@ -127,7 +106,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(591, 139);
+            this.button2.Location = new System.Drawing.Point(581, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 29);
             this.button2.TabIndex = 48;
@@ -150,7 +129,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(778, 139);
+            this.button1.Location = new System.Drawing.Point(716, 109);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 29);
             this.button1.TabIndex = 47;
@@ -158,28 +137,29 @@
             this.button1.Text = "Supprimer";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnEnregistrer
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEnregistrer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button7.CausesValidation = false;
-            this.button7.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button7.Enabled = false;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.Window;
-            this.button7.Location = new System.Drawing.Point(409, 139);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(119, 29);
-            this.button7.TabIndex = 46;
-            this.button7.TabStop = false;
-            this.button7.Text = "Enregistrer";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnEnregistrer.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEnregistrer.CausesValidation = false;
+            this.btnEnregistrer.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnEnregistrer.Enabled = false;
+            this.btnEnregistrer.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnEnregistrer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnregistrer.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEnregistrer.Location = new System.Drawing.Point(446, 109);
+            this.btnEnregistrer.Name = "btnEnregistrer";
+            this.btnEnregistrer.Size = new System.Drawing.Size(119, 29);
+            this.btnEnregistrer.TabIndex = 46;
+            this.btnEnregistrer.TabStop = false;
+            this.btnEnregistrer.Text = "Enregistrer";
+            this.btnEnregistrer.UseVisualStyleBackColor = false;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // label7
             // 
@@ -187,12 +167,11 @@
             this.label7.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(547, 78);
+            this.label7.Location = new System.Drawing.Point(547, 64);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 15);
+            this.label7.Size = new System.Drawing.Size(53, 15);
             this.label7.TabIndex = 43;
-            this.label7.Text = "Modele";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label7.Text = "Models";
             // 
             // panel1
             // 
@@ -363,7 +342,7 @@
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Controls.Add(this.pictureBox12);
             this.panel2.Controls.Add(this.pictureBox11);
-            this.panel2.Controls.Add(this.pictureBox9);
+            this.panel2.Controls.Add(this.pbxClose);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -393,16 +372,16 @@
             this.pictureBox11.TabIndex = 39;
             this.pictureBox11.TabStop = false;
             // 
-            // pictureBox9
+            // pbxClose
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(1135, 0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(26, 21);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 38;
-            this.pictureBox9.TabStop = false;
+            this.pbxClose.BackColor = System.Drawing.Color.Transparent;
+            this.pbxClose.Image = ((System.Drawing.Image)(resources.GetObject("pbxClose.Image")));
+            this.pbxClose.Location = new System.Drawing.Point(1135, 0);
+            this.pbxClose.Name = "pbxClose";
+            this.pbxClose.Size = new System.Drawing.Size(26, 21);
+            this.pbxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxClose.TabIndex = 38;
+            this.pbxClose.TabStop = false;
             // 
             // label1
             // 
@@ -426,18 +405,39 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "Gestion des Modeles";
             // 
+            // tbModels
+            // 
+            this.tbModels.Location = new System.Drawing.Point(550, 83);
+            this.tbModels.Name = "tbModels";
+            this.tbModels.Size = new System.Drawing.Size(194, 20);
+            this.tbModels.TabIndex = 56;
+            // 
+            // dgvListModels
+            // 
+            this.dgvListModels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListModels.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvListModels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListModels.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dgvListModels.Location = new System.Drawing.Point(315, 224);
+            this.dgvListModels.Name = "dgvListModels";
+            this.dgvListModels.Size = new System.Drawing.Size(659, 463);
+            this.dgvListModels.TabIndex = 53;
+            // 
             // Modeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1168, 699);
-            this.Controls.Add(this.cbxClientSexe);
+            this.Controls.Add(this.tbModels);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dgvListClient);
+            this.Controls.Add(this.dgvListModels);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -446,7 +446,6 @@
             this.Name = "Modeles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modeles";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListClient)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -460,21 +459,19 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListModels)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbxClientSexe;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dgvListClient;
         private System.Windows.Forms.Panel panel3;
         internal System.Windows.Forms.Button button2;
         internal System.Windows.Forms.Button button1;
-        internal System.Windows.Forms.Button button7;
+        internal System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label15;
@@ -493,8 +490,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pbxClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbModels;
+        private System.Windows.Forms.DataGridView dgvListModels;
     }
 }
